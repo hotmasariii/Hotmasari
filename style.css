@@ -1,23 +1,23 @@
-/* Mengatur warna latar belakang */
+/* warna latar belakang */
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
-/* Judul lebih menarik */
+/* Judul */
 h1 {
     color: #333;
     font-size: 28px;
 }
 
-/* Gaya untuk paragraf */
+/* paragraf */
 p {
     color: #555;
     font-size: 18px;
 }
 
-/* Buat tombol/link lebih bagus */
+/* link */
 a {
     text-decoration: none;
     color: white;
