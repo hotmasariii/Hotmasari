@@ -3,27 +3,57 @@
 <head>
     <title>Perpustakaan Personal Hotma Sari Sitorus</title>
 </head>    
-<body style="margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh;">
+<body style="margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: Arial, sans-serif;">
 
-<header style="position: fixed; top: 0; left: 0; width: 100%; background: #ebe3d2; color: black; text-align: center; padding: 10px 0; font-size: 16px;">
+<header style="position: fixed; top: 0; left: 0; width: 100%; background: #ebe3d2; color: black; text-align: center; padding: 15px 0; font-size: 18px; font-weight: bold;">
     <h1 style="margin: 0;">Perpustakaan Personal Hotma Sari</h1>
 </header>
 
-<!-- Konten biar gak ketutup header & tengah -->
-<div style="width: 80%; max-width: 900px; text-align: justify; margin-top: 80px; flex: 1;">
-    <h2>About Me</h2>
-    <p>Halo, aku <b>Hotma Sari Sitorus</b>, seorang mahasiswa semester 6 program studi Perpustakaan dan Sains Informasi.</p>  
+<!-- Konten Utama -->
+<div style="width: 80%; max-width: 900px; text-align: justify; margin-top: 100px; flex: 1;">
+    
+    <!-- Selamat Datang -->
+    <h2 style="text-align: center; font-size: 28px;">Selamat Datang!</h2>
+    <p style="text-align: center; font-size: 18px;">Temukan e-resources dan koleksi tugas akademik di sini. Selamat menjelajah!</p>
 
+    <!-- Biodata (Tabel Kosong) -->
+    <h3>Biodata</h3>
+    <table border="1" width="100%" style="border-collapse: collapse; text-align: left;">
+        <tr><th>Nama</th><td></td></tr>
+        <tr><th>NIM</th><td></td></tr>
+        <tr><th>Program Studi</th><td></td></tr>
+        <tr><th>Fakultas</th><td></td></tr>
+        <tr><th>Universitas</th><td></td></tr>
+    </table>
+
+    
     <h3>Kerja Sama</h3>
-    <a href="https://perpus.unsoed.ac.id/">Universitas Jenderal Soedirman</a>
+    <p>Perpustakaan ini bekerja sama dengan:</p>
+    <ul>
+        <li><a href="https://perpus.unsoed.ac.id/" target="_blank">Universitas Jenderal Soedirman</a></li>
+    </ul>
+  
+    <h3>Pendaftaran Member Perpustakaan</h3>
+    <form>
+        <label>Nama:</label><br>
+        <input type="text" name="nama" style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
 
-    <p style="height: 500px;"></p> <!-- Simulasi konten panjang -->
+        <label>Email:</label><br>
+        <input type="email" name="email" style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+
+        <label>No. Telepon:</label><br>
+        <input type="tel" name="telepon" style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+       
+        <button type="submit" style="background: #ebe3d2; padding: 10px 15px; border: none; cursor: pointer;">Daftar</button>
+    </form>
+
+    <p style="height: 50px;"></p> <!-- footer terlihat -->
 </div>
 
-<!-- Footer biar full width & rata tengah -->
 <footer style="width: 100%; background: #ebe3d2; text-align: center; padding: 10px 0; margin-top: auto;">
     <p><a href="about.html">About Me</a></p>
 </footer>
 
 </body>
 </html>
+
