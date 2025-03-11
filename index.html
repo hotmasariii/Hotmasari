@@ -2,9 +2,20 @@
 <html>
 <head>
     <title>Perpustakaan Personal Hotma Sari Sitorus</title>
-</head>    
+	
+	
+
+</head>  
+
+  
 <body style="margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; font-family: Arial, sans-serif;">
 
+<script>
+    alert("Selamat datang di Perpustakaan Personal Hotma Sari!");
+</script>
+
+
+	
 <header style="position: fixed; top: 0; left: 0; width: 100%; background: #ebe3d2; color: black; text-align: center; padding: 15px 0; font-size: 18px; font-weight: bold;">
     <h1 style="margin: 0;">Perpustakaan Personal Hotma Sari</h1>
 </header>
@@ -47,11 +58,33 @@
 </div>
 
 <footer style="width: 100%; background: #ebe3d2; text-align: center; padding: 10px 0; position: fixed; bottom: 0; left: 0;">
+    <p id="datetime"></p> <!-- Tanggal & Waktu akan muncul di sini -->
     <p>
         <a href="about.html" style="margin-right: 15px;">About Me</a> | 
         <a href="contact.html" style="margin-left: 15px;">Contact Me</a>
     </p>
 </footer>
+
+<script>
+    function updateDateTime() {
+        var now = new Date(); // Ambil waktu saat ini
+        var options = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit'
+        };
+        var dateTimeString = now.toLocaleDateString('id-ID', options); // Format sesuai Indonesia
+        document.getElementById("datetime").innerHTML = dateTimeString; // Tampilkan di footer
+    }
+
+    setInterval(updateDateTime, 1000); // Perbarui setiap 1 detik
+    updateDateTime(); // Panggil fungsi pertama kali
+</script>
+
 
 
 </body>
