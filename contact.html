@@ -18,7 +18,6 @@
 
    <h3>Kirim Pesan</h3>
 <form id="formPesan" action="https://formsubmit.co/hotmasarisitorus@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
     <label for="name">Nama:</label>
     <input type="text" id="name" name="name" required><br><br>
 
@@ -48,6 +47,69 @@
         }
     };
 </script>
+
+
+
+<h3>Tinggalkan Komentar</h3>
+<form id="commentForm">
+    <label for="commentName">Nama:</label>
+    <input type="text" id="commentName" required><br><br>
+
+    <label for="commentText">Komentar:</label><br>
+    <textarea id="commentText" rows="3" required></textarea><br><br>
+
+    <button type="submit">Kirim Komentar</button>
+</form>
+
+<h3>Komentar:</h3>
+<div id="commentList"></div>
+
+
+<script>
+    document.getElementById("commentForm").onsubmit = function(event) {
+        event.preventDefault(); // Mencegah reload halaman saat submit
+
+        let name = document.getElementById("commentName").value;
+        let comment = document.getElementById("commentText").value;
+
+        if (name.trim() === "" || comment.trim() === "") {
+            alert("Nama dan komentar tidak boleh kosong!");
+            return;
+        }
+
+        let commentList = document.getElementById("commentList");
+
+        // Buat elemen div untuk komentar baru
+        let newComment = document.createElement("div");
+        newComment.classList.add("comment");
+        newComment.innerHTML = `<strong>${name}</strong>: ${comment}`;
+
+        // Tambahkan ke daftar komentar
+        commentList.appendChild(newComment);
+
+        // Kosongkan form setelah komentar dikirim
+        document.getElementById("commentForm").reset();
+    };
+</script>
+
+<style>
+    .comment {
+        background: #f4f4f4;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    #commentForm {
+        margin-top: 30px; /* Mengurangi jarak agar lebih dekat dengan daftar komentar */
+    }
+
+    #commentList {
+        margin-top: 10px; /* Menambah sedikit jarak agar daftar komentar lebih rapi */
+    }
+</style>
+
+
 
 
  <p style="height: 50px;"></p> <!-- footer terlihat -->
