@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan Personal Hotma Sari Sitorus</title>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-	<style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
             background: #4A4E69;
             color: #ffffff;
@@ -20,10 +22,12 @@
             justify-content: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         header h1 {
             margin: 0;
             font-size: 28px;
         }
+
         main {
             max-width: 900px;
             margin: 20px auto;
@@ -32,24 +36,29 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             text-align: center;
             font-size: 28px;
             margin-bottom: 20px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
             text-align: left;
         }
+
         th {
             background-color: #f2f2f2;
         }
+
         footer {
             background: #4A4E69;
             color: #ffffff;
@@ -61,31 +70,51 @@
             width: 100%;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
+
         footer a {
             text-decoration: none;
             color: #ffffff;
             padding: 10px 15px;
             border-radius: 5px;
             transition: background 0.3s;
+            position: relative;
+            overflow: hidden;
         }
+
         footer a:hover {
             background: #9A8C98;
         }
+
+        footer a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #ffffff;
+            transform: translateX(-50%) scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        footer a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
         #datetime {
             margin: 10px 0;
         }
     </style>
     <script>
-        
         function updateDateTime() {
             var now = new Date();
-            var options = { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric', 
-                hour: '2-digit', 
-                minute: '2-digit', 
+            var options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
                 second: '2-digit'
             };
             document.getElementById('datetime').textContent = now.toLocaleDateString('id-ID', options);
@@ -93,69 +122,169 @@
         setInterval(updateDateTime, 1000);
     </script>
 </head>
+
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<header>
-    <h1>Perpustakaan Personal Hotma Sari</h1>
-</header>
+    <header>
+        <h1>Perpustakaan Personal Hotma Sari</h1>
+    </header>
 
-<main>
-    <h2>About Me</h2>
-    <h3>Biodata</h3>
-    <table>
-        <tr>
-            <th>Nama</th>
-            <td>Hotma Sari Sitorus</td>
-        </tr>
-        <tr>
-            <th>NIM</th>
-            <td>220709057</td>
-        </tr>
-        <tr>
-            <th>Program Studi</th>
-            <td>Perpustakaan dan Sains Informasi</td>
-        </tr>
-        <tr>
-            <th>Fakultas</th>
-            <td>Fakultas Ilmu Budaya</td>
-        </tr>
-        <tr>
-            <th>Universitas</th>
-            <td>Universitas Sumatera Utara</td>
-        </tr>
-    </table>
-</main>
+    <main>
 
-<footer>
-    <p>
-        <a href="index.html">Homepage</a> | 
-        <a href="about.html">About Me</a> | 
-        <a href="contact.html">Contact Me</a>
-    </p>
-    <p id="datetime"></p>
-	<style>
-   
-    footer a {
-        position: relative;
-        overflow: hidden;
-    }
-    footer a::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background: #ffffff;
-        transform: translateX(-50%) scaleX(0);
-        transition: transform 0.3s ease;
-    }
-    footer a:hover::after {
-        transform: translateX(-50%) scaleX(1);
-    }
-</style>
-</footer>
+        <h3>Biodata</h3>
+        <table>
+            <tr>
+                <th>Nama</th>
+                <td>Hotma Sari Sitorus</td>
+            </tr>
+            <tr>
+                <th>NIM</th>
+                <td>220709057</td>
+            </tr>
+            <tr>
+                <th>Program Studi</th>
+                <td>Perpustakaan dan Sains Informasi</td>
+            </tr>
+            <tr>
+                <th>Fakultas</th>
+                <td>Fakultas Ilmu Budaya</td>
+            </tr>
+            <tr>
+                <th>Universitas</th>
+                <td>Universitas Sumatera Utara</td>
+            </tr>
+        </table>
+<div style="margin-bottom: 30px;"></div>
 
+        <h3>Rekomendasi Bacaan</h3>
+		<p style="text-align: center; margin-top: 20px; font-style: italic;">Get to know me from my reading!</p>
+		
+		<div style="margin-bottom: 20px;"> 
+			<div style="display: flex; align-items: center;">
+            <img src="https://cdn.gramedia.com/uploads/items/9786020639321_MALICE.jpg" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Malice</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Keigo Higashino
+</strong></p>
+                <p>Hidaka Kunihiko, seorang novelis ternama, ditemukan tewas di rumahnya pada malam hari, tepat sebelum dirinya meninggalkan Jepang untuk pindah ke Kanada. Tubuhnya yang sudah tak bernyawa ditemukan di ruang kerjanya yang terkunci di rumahnya. Rumahnya itu juga terkunci, dan di dalam rumah itu terdapat istri dan sahabatnya. Namun, keduanya memiliki alibi yang kuat. Mungkin.
+
+Detektif Kaga Kyoichiro yang bertugas menyelidiki kasus pembunuhan itu menemukan bahwa hubungan Hidaka Kunihiko dengan sahabatnya, Nonoguchi Osamu, tak sesuai seperti yang diceritakan oleh Nonoguchi. Namun, pertanyaan yang paling mengganggu Detektif Kaga bukanlah siapa pelakunya atau bagaimana pembunuhannya, melainkan mengapa itu bisa terjadi.
+
+Dari pertanyaan itu, Detektif Kaga dan sang pembunuh bertarung membeberkan kebenaran mengenai masa lalu dan masa kini dalam versinya masing-masing. Kalau Detektif Kaga gagal mengungkap motif sang pembunuh yang sebenarnya, kebenaran tidak akan terungkap seutuhnya.</p>
+            </div>
+            </div>
+			</div>
+				
+		<div style="margin-bottom: 20px;"> 
+        <div style="display: flex; align-items: center;">
+            <img src="https://m.media-amazon.com/images/I/91Lbhwt5RzL.jpg" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Animal Farm</strong></h5>
+				<p><strong>Pengarang: </strong><strong>George Orwell</strong></p>
+                <p>Suatu malam, Major, si babi tua yang bijaksana, mengumpulkan para binatang di peternakan untuk bercerita tentang mimpinya. Setelah sekian lama hidup di bawah tirani manusia, Major mendapat visi bahwa kelak sebuah pemberontakan akan dilakukan binatang terhadap manusia; menciptakan sebuah dunia di mana binatang akan berkuasa atas dirinya sendiri.
+
+Tak lama, pemberontakan benar-benar terjadi. Kekuasaan manusia digulingkan di bawah pimpinan dua babi cerdas: Snowball dan Napoleon. Namun, kekuasaan ternyata sungguh memabukkan. Demokrasi yang digaungkan perlahan berbelok kembali menjadi tiran di mana pemimpin harus selalu benar. Dualisme kepemimpinan tak bisa dibiarkan. Salah satu harus disingkirkan … walau harus dengan kekerasan.
+
+Animal Farm merupakan novel alegori politik yang ditulis Orwell pada masa Perang Dunia II sebagai satire atas totaliterisme Uni Soviet. Dianugerahi Retro Hugo Award untuk novela terbaik (1996) dan Prometheus Hall of Fame Award (2011), Animal Farm menjadi mahakarya Orwell yang melejitkan namanya.</p>
+            </div>
+			</div>
+			</div>
+			
+			<div style="margin-bottom: 20px;"> 	
+			<div style="display: flex; align-items: center;">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1637913585i/59702962.jpg" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Things Left Behind: Hal-hal yang Kita Pelajari dari Mereka yang Telah Tiada</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Kim Sae-Byoul, Jeon Ae Won, Anna Lee (Translator)</strong></p>
+                <p>Beberapa dari kita mungkin bertanya-tanya akan apa yang sebenarnya terjadi setelah kematian, kisah dibalik kematian atau kesepian karena ditinggalkan orang yang dicintai, hingga alasan seseorang mengakhiri hidupnya.
+
+Pertanyaan itu akan kamu dapatkan saat membaca kumpulan esai dalam buku ini. Things Left Behind merupakan esai populer dari Korea Selatan yang ditulis oleh Kim Sae Byoul. Buku ini mengungkap berbagai macam kisah nyata dibalik kematian yang diceritakan langsung oleh seorang pengurus barang-barang peninggalan orang yang telah meninggal dunia.
+
+Mereka yang telah tiada, ada yang meninggal secara natural ataupun pembunuhan dan bunuh diri. Ternyata, barang-barang peninggalan milik orang yang telah tiada seringkali ditemui kasus-kasus mengejutkan, seperti orang tua yang meninggal tanpa diketahui orang lain dan jenazahnya baru ditemukan beberapa minggu kemudian, hingga kasus-kasus menyedihkan lainnya.</p>
+            </div>
+            </div>
+			</div>
+			
+			<div style="margin-bottom: 20px;"> 
+			<div style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDvyo659LKWl8favL2MiKt55c4mC-44PB_jA&s" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Metamorphosis</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Franz Kafka</strong></p>
+                <p>This is the story of a young man who, transformed overnight into a giant beetle-like insect, becomes an object of disgrace to his family, an outsider in his own home, a quintessentially alienated man. A harrowing—though absurdly comic—meditation on human feelings of inadequacy, guilt, and isolation, The Metamorphosis has taken its place as one of the most widely read and influential works of twentieth-century fiction.
+</p>
+            </div>
+            </div>
+			</div>
+			
+			<div style="margin-bottom: 20px;"> 	
+			<div style="display: flex; align-items: center;">
+            <img src="data:image/jpeg;base64,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" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Days at the Morisaki Bookshop</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Satoshi Yagisawa</strong></p>
+                <p>Hidden in Jimbocho, Tokyo, is a booklover's paradise. On a quiet corner in an old wooden building lies a shop filled with hundreds of second-hand books.
+
+Twenty-five-year-old Takako has never liked reading, although the Morisaki bookshop has been in her family for three generations. It is the pride and joy of her uncle Satoru, who has devoted his life to the bookshop since his wife Momoko left him five years earlier.
+
+When Takako's boyfriend reveals he's marrying someone else, she reluctantly accepts her eccentric uncle's offer to live rent-free in the tiny room above the shop. Hoping to nurse her broken heart in peace, Takako is surprised to encounter new worlds within the stacks of books lining the Morisaki bookshop.
+
+As summer fades to autumn, Satoru and Takako discover they have more in common than they first thought. The Morisaki bookshop has something to teach them both about life, love, and the healing power of books.</p>
+            </div>
+            </div>
+			
+			<div style="margin-bottom: 20px;"> 
+	   <div style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0UCqlktQXn1JgmhzRgLfz36GYNTLwpDpcbA&s" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Teka-teki Terakhir</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Annisa Ihsani</strong></p>
+                <p>Gosipnya, suami-istri Maxwell penyihir. Ada juga yang bilang pasangan itu ilmuwan gila. Tidak sedikit yang mengatakan mereka keluarga ningrat yang melarikan diri ke Littlewood. Hanya itu yang Laura tahu tentang tetangganya tersebut.
+
+Dia tidak pernah menyangka kenyataan tentang mereka lebih misterius daripada yang digosipkan. Di balik pintu rumah putih di Jalan Eddington, ada sekumpulan teka-teki logika, paradoks membingungkan tentang tukang cukur, dan obsesi terhadap pernyataan matematika yang belum terpecahkan selama lebih dari tiga abad. Terlebih lagi, Laura tidak pernah menyangka akan menjadi bagian dari semua itu.
+
+Tahun 1992, Laura berusia dua belas tahun, dan teka-teki terakhir mengubah hidupnya selamanya...</p>
+            </div>
+            </div>
+			</div>
+			
+			<div style="margin-bottom: 20px;"> 
+			<div style="display: flex; align-items: center;">
+            <img src="https://cdnwpseller.gramedia.net/wp-content/uploads/2022/10/9786020621906_THE_NEWCOMER-364x542.jpg" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>The Newcomer</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Keigo Higashino</strong></p>
+                <p>Mineko Mitsui yang merupakan seorang wanita yang telah bercerai dengan suaminya dan berusaha untuk hidup sendiri di lingkungan Kodenmacho distrik Nihonbashi, Tokyo, Jepang.
+
+Mineko ditemukan tewas tercekik di apartemen barunya. Penyidik dari kantor polisi setempat mulai bekerja sama dengan polisi Kota Tokyo untuk memecahkan kasus tersebut.
+
+Tapi karena barang bukti yang sulit ditemukan di TKP, membuat salah satu detektif dari kepolisian mulai mencari lewat toko-toko yang berdekatan dengan lokasi kejadian.</p>
+            </div>
+            </div>
+			</div>
+			
+			<div style="margin-bottom: 20px;"> 
+			<div style="display: flex; align-items: center;">
+            <img src="https://lib.unwahas.ac.id/lib/minigalnano/createthumb.php?filename=images/docs/9786020648293_Keajaiban_Toko_Kelontong_Namiya_cov.jpg.jpg&width=200" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <div class="event-content">
+                <h5><strong>Keajaiban Toko Kelontong Namiya</strong></h5>
+				<p><strong>Pengarang: </strong><strong>Keigo Higashino</strong></p>
+                <p>Ketika tiga pemuda berandal bersembunyi di toko kelontong tak berpenghuni setelah melakukan pencurian, sepucuk surat misterius mendadak diselipkan ke dalam toko melalui lubang surat. Surat yang berisi permintaan saran. Sungguh aneh. Namun, surat aneh itu ternyata membawa mereka dalam petualangan melintasi waktu, menggantikan peran kakek pemilik toko kelontong yang menghabiskan tahun-tahun terakhirnya memberikan nasihat tulus kepada orang-orang yang meminta bantuan. Hanya untuk satu malam. Dan saat fajar menjelang, hidup ketiga sahabat itu tidak akan pernah sama lagi...</p>
+            </div>
+            </div>
+			</div>
+			
+    </main>
+
+    <footer>
+        <p>
+            <a href="index.html">Homepage</a> | 
+            <a href="about.html">About Me</a> | 
+            <a href="contact.html">Contact Me</a>
+        </p>
+        <p id="datetime"></p>
+    </footer>
 </body>
+
 </html>
