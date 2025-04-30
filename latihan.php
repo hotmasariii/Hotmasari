@@ -47,11 +47,11 @@
 <body>
     <div class="container">
         <h1>Hello World</h1>
-        <a href="http://localhost/tabel1.php">Tabel 1</a>
-		<a href="http://localhost/tabel2.php">Tabel 2</a>
-        <a href="http://localhost/tabel3.php">Tabel 3</a>
-        <a href="http://localhost/tabel_perkalian.php">Tabel Perkalian 10x10</a>
-        <a href="http://formulir.php">Formulir</a>
+        <a href="tabel1.php">Tabel 1</a>
+	<a href="tabel2.php">Tabel 2</a>
+        <a href="tabel3.php">Tabel 3</a>
+        <a href="tabel_perkalian.php">Tabel Perkalian 10x10</a>
+        <a href="formulir.php">Formulir</a>
     </div>
 </body>
 </html>
