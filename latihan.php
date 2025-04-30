@@ -51,7 +51,7 @@
 		<a href="http://localhost/tabel2.php">Tabel 2</a>
         <a href="http://localhost/tabel3.php">Tabel 3</a>
         <a href="http://localhost/tabel_perkalian.php">Tabel Perkalian 10x10</a>
-        <a href="http://localhost/formulir.php">Formulir</a>
+        <a href="http://formulir.php">Formulir</a>
     </div>
 </body>
 </html>
