@@ -104,6 +104,46 @@
         #datetime {
             margin: 10px 0;
         }
+		.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* muncul di atas link */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
     </style>
     <script>
         function updateDateTime() {
@@ -252,7 +292,7 @@ Tahun 1992, Laura berusia dua belas tahun, dan teka-teki terakhir mengubah hidup
 			
 			<div style="margin-bottom: 20px;"> 
 			<div style="display: flex; align-items: center;">
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gramedia.com%2Fproducts%2Fpembunuhan-di-nihonbashi-the-newcomer&psig=AOvVaw1Xn7DrHNmcI0Op_JnyIAeY&ust=1746683301386000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICj9sDUkI0DFQAAAAAdAAAAABAE" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
+            <img src="https://cdnwpseller.gramedia.net/wp-content/uploads/2022/10/9786020621906_THE_NEWCOMER-364x542.jpg" alt="Deskripsi gambar" style="width: 150px; margin-right: 15px;" />
             <div class="event-content">
                 <h5><strong>The Newcomer</strong></h5>
 				<p><strong>Pengarang: </strong><strong>Keigo Higashino</strong></p>
@@ -279,11 +319,25 @@ Tapi karena barang bukti yang sulit ditemukan di TKP, membuat salah satu detekti
     </main>
 
     <footer>
-        <p>
-        <a href="index.html">Homepage</a> | 
-        <a href="about.html">About Me</a> | 
-        <a href="contact.html">Contact Me</a> |
-	<a href='http://localhost/latihan.php'>Latihan PHP</a>
+               	 <span class="tooltip-container">
+        <a href="index.html">Homepage</a>
+        <span class="tooltip-text">Anda akan diarahkan ke halaman utama</span>
+    </span>
+
+    <span class="tooltip-container">
+        <a href="about.html">About Me</a>
+        <span class="tooltip-text">Lihat profil dan rekomendasi bacaan</span>
+    </span>
+
+    <span class="tooltip-container">
+        <a href="contact.html">Contact Me</a>
+        <span class="tooltip-text">Hubungi saya untuk kritik dan saran</span>
+    </span>
+
+    <span class="tooltip-container">
+        <a href="http://localhost/latihan.php">Latihan PHP</a>
+        <span class="tooltip-text">Menuju halaman latihan PHP (localhost)</span>
+    </span>
         </p>
         <p id="datetime"></p>
     </footer>
