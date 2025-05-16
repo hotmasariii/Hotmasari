@@ -157,34 +157,12 @@
     border-style: solid;
     border-color: #333 transparent transparent transparent;
 }
-
-    <style>
-        /* Gaya CSS untuk pop-up cookies */
-        #cookie-popup {
-            display: none; /* Sembunyikan pop-up secara default */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.9); /* Latar belakang putih transparan */
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            z-index: 1000;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
-        #overlay {
-            display: none; /* Sembunyikan overlay secara default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Latar belakang gelap transparan */
-            z-index: 999;
-        }
+<!-- Banner Cookies -->
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #4A4E69; color: white; text-align: center; padding: 10px; z-index: 1000;">
+    Kami menggunakan cookies untuk meningkatkan pengalaman Anda. 
+    <button id="accept-cookies" style="background: #9A8C98; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Terima</button>
+</div>
+   
     </style>
     <script>
         alert("Selamat datang di Perpustakaan Personal Hotma Sari!");
