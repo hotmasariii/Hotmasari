@@ -6,6 +6,7 @@
     <title>Perpustakaan Personal Hotma Sari Sitorus</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <style>
+	
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -157,34 +158,18 @@
     border-color: #333 transparent transparent transparent;
 }
 
-  <h1>Demo Cookies</h1>
 
-  <button onclick="buatCookie()">Buat Cookie</button>
-  <button onclick="bacaCookie()">Baca Cookie</button>
-  <button onclick="hapusCookie()">Hapus Cookie</button>
-
-  <p id="hasil"></p>
-
-  <script>
-    function buatCookie() {
-      document.cookie = "nama=Sar; expires=Fri, 31 Dec 2025 23:59:59 UTC; path=/";
-      document.getElementById("hasil").innerText = "Cookie telah dibuat.";
-    }
-
-    function bacaCookie() {
-      const cookie = document.cookie;
-      document.getElementById("hasil").innerText = "Isi cookie: " + cookie;
-    }
-
-    function hapusCookie() {
-      document.cookie = "nama=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-      document.getElementById("hasil").innerText = "Cookie telah dihapus.";
-    }
-  </script>
     </style>
     <script>
         alert("Selamat datang di Perpustakaan Personal Hotma Sari!");
     </script>
+	
+	<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #4A4E69; color: white; text-align: center; padding: 10px;">
+    Kami menggunakan cookies untuk meningkatkan pengalaman Anda. 
+    <button id="accept-cookies" style="background: #9A8C98; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Terima</button>
+</div>
+
+
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -265,6 +250,18 @@
     
     setInterval(updateDateTime, 1000);
     updateDateTime(); 
+	
+	document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-banner").style.display = "block";
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true");
+        document.getElementById("cookie-banner").style.display = "none";
+    });
+});
+
 </script>
 </footer>
 
