@@ -158,17 +158,45 @@
     border-color: #333 transparent transparent transparent;
 }
 
-
+    <style>
+        /* Gaya CSS untuk pop-up cookies */
+        #cookie-popup {
+            display: none; /* Sembunyikan pop-up secara default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9); /* Latar belakang putih transparan */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+        #overlay {
+            display: none; /* Sembunyikan overlay secara default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Latar belakang gelap transparan */
+            z-index: 999;
+        }
     </style>
     <script>
         alert("Selamat datang di Perpustakaan Personal Hotma Sari!");
     </script>
-	
-	<!-- Banner Cookies -->
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #4A4E69; color: white; text-align: center; padding: 10px; z-index: 1000;">
-    <p style="margin: 0;">About Cookies On This Site</p>
-    <p style="margin: 0;">We use cookies to enhance your website experience, learn how our site is used, offer personalised features, measure the effectiveness of our services, and tailor content and ads to your interests while you navigate on the web or interact with us across devices.</p>
-    <button id="accept-cookies" style="background: #9A8C98; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Terima</button>
+
+	<!-- Overlay untuk pop-up -->
+<div id="overlay"></div>
+<!-- Pop-up Cookies -->
+<div id="cookie-popup">
+    <h2>About Cookies On This Site</h2>
+    <p>We use cookies to enhance your website experience, learn how our site is used, offer personalised features, measure the effectiveness of our services, and tailor content and ads to your interests while you navigate on the web or interact with us across devices.</p>
+    <button id="accept-cookies" style="background: #4A4E69; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Terima</button>
 </div>
 
 
