@@ -157,6 +157,30 @@
     border-color: #333 transparent transparent transparent;
 }
 
+  <h1>Demo Cookies</h1>
+
+  <button onclick="buatCookie()">Buat Cookie</button>
+  <button onclick="bacaCookie()">Baca Cookie</button>
+  <button onclick="hapusCookie()">Hapus Cookie</button>
+
+  <p id="hasil"></p>
+
+  <script>
+    function buatCookie() {
+      document.cookie = "nama=Sar; expires=Fri, 31 Dec 2025 23:59:59 UTC; path=/";
+      document.getElementById("hasil").innerText = "Cookie telah dibuat.";
+    }
+
+    function bacaCookie() {
+      const cookie = document.cookie;
+      document.getElementById("hasil").innerText = "Isi cookie: " + cookie;
+    }
+
+    function hapusCookie() {
+      document.cookie = "nama=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      document.getElementById("hasil").innerText = "Cookie telah dihapus.";
+    }
+  </script>
     </style>
     <script>
         alert("Selamat datang di Perpustakaan Personal Hotma Sari!");
